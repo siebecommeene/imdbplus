@@ -109,6 +109,7 @@ const Movie = ({ data, level }) => {
 
           </div>
 
+          
           {newsitems && newsitems.length > 0 && <SmallCardList items={newsitems} title={resolveNews[locale]} type="newsitem"></SmallCardList>}
           {products && products.length > 0 && <SmallCardList items={products} title={resolveMerchandise[locale]} type="product"></SmallCardList>}
         </div>
