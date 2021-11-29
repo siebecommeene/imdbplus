@@ -15,7 +15,7 @@ const MovieList = ({ data, level, locale }) => {
 
   function updateSortby(sortby){
     setSortby(sortby);
-    getAllItems('movie', locale, sortby).then(
+    getAllItems('songs', locale, sortby).then(
       function (result) {
         setItems(result.data.stories);
       });
@@ -23,7 +23,7 @@ const MovieList = ({ data, level, locale }) => {
   
 
   const [items, setItems] = useState([]);
-  getAllItems('movie', locale, sortby).then(
+  getAllItems('songs', locale, sortby).then(
     function (result) {
       setItems(result.data.stories);
     });
@@ -44,7 +44,7 @@ const MovieList = ({ data, level, locale }) => {
         </div>
       </div>
       <div>
-        {items && items.length > 0 && <SmallCardList items={items} type="movie"></SmallCardList>}
+        {items && items.length > 0 && <SmallCardList items={items} type="songs"></SmallCardList>}
       </div>
     </div>
 
