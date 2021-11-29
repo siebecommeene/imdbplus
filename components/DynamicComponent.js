@@ -7,7 +7,7 @@ import PostsList from './PostsList'
 import Page from './Page'
 import BlogPost from './BlogPost'
 import Text from './Text'
-import songs from './Song'
+import Song from './Song'
 import Personality from './Personality'
 import Studio from './Studio'
 import Genre from './Genre'
@@ -35,7 +35,7 @@ const Components = {
   'post': BlogPost,
   'text': Text,
   'selected-posts': PostsList,
-  'song': songs,
+  'song': Song,
   'personality': Personality,
   'studio': Studio,
   'genre' : Genre,
