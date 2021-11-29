@@ -7,7 +7,7 @@ import PostsList from './PostsList'
 import Page from './Page'
 import BlogPost from './BlogPost'
 import Text from './Text'
-import songs from './Song'
+import Song from './Song'
 import Personality from './Personality'
 import Studio from './Studio'
 import Genre from './Genre'
@@ -25,6 +25,7 @@ import TwoCol from './TwoCol'
 import Title from './Title'
 import TopMovies from './TopMovies'
 import AgeRating from './AgeRating'
+import songs from './Song'
 
 const Components = {
   'teaser': Teaser,

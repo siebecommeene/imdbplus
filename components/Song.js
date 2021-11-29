@@ -33,7 +33,7 @@ const resolveNews = {
   nl: 'Nieuws',
 }
 
-const songs = ({ data, level }) => {
+const Song = ({ data, level }) => {
   var locale = 'en';
   //enriching data
   if (level === 'data') {
@@ -59,13 +59,13 @@ const songs = ({ data, level }) => {
   }
 
   const [products, setProducts] = useState([]);
-  getData(data.story.uuid, locale, content.preview = false, 'product', 'songs').then(
+  getData(data.story.uuid, locale, content.preview = false, 'product', 'song').then(
     function (result) {
       setProducts(result.data.stories);
     });
 
   const [newsitems, setNewsitems] = useState([]);
-  getData(data.story.uuid, locale, content.preview = false, 'newsitem', 'songs').then(
+  getData(data.story.uuid, locale, content.preview = false, 'newsitem', 'song').then(
     function (result) {
       setNewsitems(result.data.stories);
     });
@@ -117,4 +117,4 @@ const songs = ({ data, level }) => {
   )
 }
 
-export default songs
+export default Song
