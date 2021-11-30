@@ -7,8 +7,8 @@ const Footer = () => {
 
         <div className="">
           <img
-            src="https://a.storyblok.com/f/133261/3039x582/a60d166ec2/logo-colored-full.png/m/200x0"
-            alt="IMDBPlus Logo"
+            src="https://a.storyblok.com/f/134952/500x500/ebe8675a16/themusicpro-2_adobespark.png"
+            alt="TheMusicPro Logo"
             className=""
           />
         </div>
