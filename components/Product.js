@@ -14,8 +14,8 @@ import { FacebookShareButton, FacebookIcon,TwitterShareButton, TwitterIcon, Link
 const Product = ({ data, level }) => {
   if (level === 'data') {
     var content = data.story.content;
-    var movies = data.rels.filter(obj => {
-      return content.movies.includes(obj.uuid);
+    var songs = data.rels.filter(obj => {
+      return content.songs.includes(obj.uuid);
     });
     var personalities = data.rels.filter(obj => {
       return content.personalities.includes(obj.uuid);
@@ -62,8 +62,8 @@ const Product = ({ data, level }) => {
             <div className={styles.content}> {render(content.description)}</div>
 
           </div>
-          {movies && movies.length > 0 && <SmallCardList items={songs} title="Related Songs" type="movie"></SmallCardList>}
-          {personalities && personalities.length > 0 && <SmallCardList items={personalities} title="Related Stars" type="personality"></SmallCardList>}
+          {songs && songs.length > 0 && <SmallCardList items={songs} title="Related Songs" type="song"></SmallCardList>}
+          {personalities && personalities.length > 0 && <SmallCardList items={personalities} title="Related Artists" type="personality"></SmallCardList>}
         </div>
       </main>
     </SbEditable>
