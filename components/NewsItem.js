@@ -6,7 +6,7 @@ import SmallCardList from "./SmallCardList"
 
 
 
-const NewsItem = ({ data, level }) => {
+const Event = ({ data, level }) => {
   var movies = [];
   var personalities = [];
   //enriching data
@@ -47,4 +47,4 @@ const NewsItem = ({ data, level }) => {
   )
 }
 
-export default NewsItem
+export default Event
