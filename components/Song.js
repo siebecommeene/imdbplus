@@ -28,9 +28,9 @@ const resolveMerchandise = {
   nl: 'Producten',
 }
 
-const resolveNews = {
-  en: 'News',
-  nl: 'Nieuws',
+const resolveEvents = {
+  en: 'Events',
+  nl: 'Evenementen',
 }
 
 const Song = ({ data, level }) => {
@@ -77,7 +77,7 @@ const Song = ({ data, level }) => {
     <SbEditable content={content} key={content._uid}>
       <main>
         {/* <div className={[styles.movie, styles.test].join(' ')}> */}
-        <div className={styles.movie}>
+        <div className={styles.song}>
           <h1 className={styles.title}>
             {content.title}
           </h1>
