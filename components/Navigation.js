@@ -9,9 +9,9 @@ const Navigation = ({ locale, locales }) => {
     en: 'Artists',
     nl: 'Artiesten',
   }
-  const resolveNews = {
-    en: 'News',
-    nl: 'Nieuws',
+  const resolveEvents = {
+    en: 'Events',
+    nl: 'Evenementen',
   }
   const resolveMerchandise = {
     en: 'Shop',
@@ -45,7 +45,7 @@ const Navigation = ({ locale, locales }) => {
               <a href={`${defaultLocale}pages/artists`} className={styles.personality}>{resolveArtists[locale]}</a>
             </div>
             <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/news`} className={styles.newsitem}>{resolveNews[locale]}</a>
+              <a href={`${defaultLocale}pages/events`} className={styles.newsitem}>{resolveEvents[locale]}</a>
             </div>
             <div className={styles.navlink}>
               <a href={`${defaultLocale}pages/shop`} className={styles.product}>{resolveMerchandise[locale]}</a>
