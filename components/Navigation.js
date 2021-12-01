@@ -1,13 +1,13 @@
 import styles from "../styles/Navigation.module.scss"
 
 const Navigation = ({ locale, locales }) => {
-  const resolveMovies = {
-    en: 'Movies',
-    nl: 'Films',
+  const resolveSongs = {
+    en: 'Songs',
+    nl: 'Liedjes',
   }
-  const resolvePeople = {
-    en: 'People',
-    nl: 'Mensen',
+  const resolveArtists = {
+    en: 'Artists',
+    nl: 'Artiesten',
   }
   const resolveNews = {
     en: 'News',
@@ -39,10 +39,10 @@ const Navigation = ({ locale, locales }) => {
         <div className={styles.navlinkswrapper}>
           <div className={styles.navlinks}>
             <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/movies`} className={styles.movie}>{resolveMovies[locale]}</a>
+              <a href={`${defaultLocale}pages/songs`} className={styles.song}>{resolveSongs[locale]}</a>
             </div>
             <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/people`} className={styles.personality}>{resolvePeople[locale]}</a>
+              <a href={`${defaultLocale}pages/artists`} className={styles.personality}>{resolveArtists[locale]}</a>
             </div>
             <div className={styles.navlink}>
               <a href={`${defaultLocale}pages/news`} className={styles.newsitem}>{resolveNews[locale]}</a>
