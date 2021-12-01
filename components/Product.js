@@ -62,7 +62,7 @@ const Product = ({ data, level }) => {
             <div className={styles.content}> {render(content.description)}</div>
 
           </div>
-          {movies && movies.length > 0 && <SmallCardList items={movies} title="Related Movies" type="movie"></SmallCardList>}
+          {movies && movies.length > 0 && <SmallCardList items={songs} title="Related Songs" type="movie"></SmallCardList>}
           {personalities && personalities.length > 0 && <SmallCardList items={personalities} title="Related Stars" type="personality"></SmallCardList>}
         </div>
       </main>

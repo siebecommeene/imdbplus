@@ -8,7 +8,7 @@ const Genre = ({ data }) => {
   return (
     <SbEditable content={content} key={content._uid}>
       <main>
-        {/* <div className={[styles.movie, styles.test].join(' ')}> */}
+        {/* <div className={[styles.song, styles.test].join(' ')}> */}
         <div className={styles.studio}>
           <h1 className={styles.title}>
             {content.title}
