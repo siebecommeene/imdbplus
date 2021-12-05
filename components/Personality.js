@@ -9,6 +9,9 @@ import RelatedItemGallery from "./RelatedItemGallery"
 const Personality = ({ data, level }) => {
   if (level === 'data') {
     var content = data.story.content;
+    var songs = data.rels.filter(obj => {
+      return content.songs.includes(obj.uuid);
+    });
     var countries = data.rels.filter(obj => {
       return content.nationality.includes(obj.uuid);
     });
@@ -28,9 +31,6 @@ const Personality = ({ data, level }) => {
       setNewsitems(result.data.stories);
     });
 
-  // var genres = data.rels.filter(obj => {
-  //   return content.genres.includes(obj.uuid);
-  // })
   var pictures = content.pictures;
 
   return (
@@ -60,6 +60,7 @@ const Personality = ({ data, level }) => {
           </div>
           {products&&products.length>0&&<RelatedItemGallery items={products} title="Merchandise" type="product"></RelatedItemGallery>}
           {newsitems&&newsitems.length>0&&<RelatedItemGallery items={newsitems} title="News" type="newsitem"></RelatedItemGallery>}
+          {songs&&songs.length>0&&<RelatedItemGallery items={songs} title="Related Songs" type="song"></RelatedItemGallery>}
         </div>
       </main>
     </SbEditable>

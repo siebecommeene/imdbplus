@@ -46,9 +46,9 @@ const InPageSlideshow = ({ pictures }) => {
         containerClass="carousel-container"
         removeArrowOnDeviceType={[]}
         dotListClass="custom-dot-list-style">
-        {pictures.map((item, indx) => {
+        {pictures.map((item, index) => {
           return (
-            <div className={styles.item} key={indx}>
+            <div className={styles.item} key={index}>
               <div className={styles.mainpicture} style={{ backgroundImage: `url("${item.filename}")` }}>
               </div>
             </div>

@@ -6,7 +6,7 @@
     height: 500px;
     background-size: cover;
     background-position: center;
-    box-shadow: inset 0 0 0px 10px #000;
+    box-shadow: inset 0 0 0px 10px rgb(102, 77, 77);
     margin-bottom: 40px;
   }
 
@@ -17,15 +17,24 @@
   .genrelist {
     display: flex;
     margin-bottom: 40px;
+    background-color: #831212;
 
-    .genre {
+    .genres {
       padding: 5px 20px;
-      background-color: #f0f0f0;
+      background-color: #831212;
       max-width: 100px;
       margin-right: 10px;
       font-weight: 700;
     }
   }
+
+  .genre{
+    padding: 5px 20px;
+      background-color: #831212;
+      max-width: 100px;
+      margin-right: 10px;
+      font-weight: 700;
+    }
 
   .peoplesegment {
     margin-top:40px;

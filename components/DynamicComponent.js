@@ -25,6 +25,9 @@ import TwoCol from './TwoCol'
 import Title from './Title'
 import TopMovies from './TopMovies'
 import AgeRating from './AgeRating'
+import Album from './Album'
+import Albumlist from './AlbumList'
+import Likebutton from './Likebutton'
 
 const Components = {
   'teaser': Teaser,
@@ -53,7 +56,11 @@ const Components = {
   'twocol':TwoCol,
   'title':Title,
   'topmovies':TopMovies,
-  'agerating':AgeRating
+  'agerating':AgeRating,
+  'album':Album,
+  'albumlist':Albumlist,
+  'likebutton':Likebutton
+  
 }
 
 

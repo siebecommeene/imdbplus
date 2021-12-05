@@ -28,7 +28,7 @@ const resolveMerchandise = {
   nl: 'Producten',
 }
 
-const resolveEvents = {
+const resolveNews = {
   en: 'Events',
   nl: 'Evenementen',
 }
@@ -39,35 +39,30 @@ const Song = ({ data, level }) => {
   if (level === 'data') {
     locale = data.story.lang;
     var content = data.story.content;
-    var directors = data.rels.filter(obj => {
-      return content.directors.includes(obj.uuid);
-    });
-    var stars = data.rels.filter(obj => {
-      return content.stars.includes(obj.uuid);
-    });
-    var writers = data.rels.filter(obj => {
-      return content.writers.includes(obj.uuid);
-    })
-    var studios = data.rels.filter(obj => {
-      return content.studios.includes(obj.uuid);
-    })
     var genres = data.rels.filter(obj => {
-      return content.genres.includes(obj.uuid);
+      return content.genre.includes(obj.uuid);
     })
+  
   } else {
     var content = data;
   }
 
   const [products, setProducts] = useState([]);
-  getData(data.story.uuid, locale, content.preview = false, 'product', 'song').then(
+  getData(data.story.uuid, data.story.lang, content.preview = false, 'product', 'personalities').then(
     function (result) {
       setProducts(result.data.stories);
     });
 
   const [newsitems, setNewsitems] = useState([]);
-  getData(data.story.uuid, locale, content.preview = false, 'newsitem', 'song').then(
+  getData(data.story.uuid, data.story.lang, content.preview = false, 'newsitem', 'personalities').then(
     function (result) {
       setNewsitems(result.data.stories);
+    });
+  
+  const [likebutton, setLikebutton] = useState([]);
+  getData(data.story.uuid, locale, content.preview = false, 'likebutton', 'song').then(
+    function (result) {
+      setLikebutton(result.data.stories);
     });
 
   var pictures = content.pictures;
@@ -88,30 +83,26 @@ const Song = ({ data, level }) => {
               </div>
             ))}
           </div>
-          <div className={styles.mainpicture} style={{ backgroundImage: `url("${content.mainpicture.filename}")` }}>
-          </div>
+          <div className={styles.mainpicture} style={{ backgroundImage: `url("${content.mainpicture.filename}")` }}></div>
           <div className={styles.imagegallery}>
             <InPageSlideshow pictures={pictures}></InPageSlideshow>
-          </div>  
+          </div>
 
           <div className={styles.short}>
-            {render(content.short)}
+            Number of Plays: {render(content.numberofplays)}
           </div>
           <div className={styles.synopsis}>
-            {render(content.synopsis)}
+            Release Date: {render(content.releasedate)}
           </div>
-          <div className={styles.peoplesegment}>
-            <div className={styles.content}>
-              {directors && directors.length > 0 && <RelatedItemGallerySmall items={directors} title={resolveDirectors[locale]} type="personality"></RelatedItemGallerySmall>}
-              {writers && writers.length > 0 && <RelatedItemGallerySmall items={writers} title={resolveWriters[locale]} type="personality"></RelatedItemGallerySmall>}
-              {stars && stars.length > 0 && <RelatedItemGallerySmall items={stars} title={resolveStars[locale]} type="personality"></RelatedItemGallerySmall>}
-            </div>
-
+          <div className={styles.short}>
+             {render(content.clip)}
           </div>
-
-          {newsitems && newsitems.length > 0 && <SmallCardList items={newsitems} title={resolveNews[locale]} type="newsitem"></SmallCardList>}
-          {products && products.length > 0 && <SmallCardList items={products} title={resolveMerchandise[locale]} type="product"></SmallCardList>}
-        </div>
+          <div className={styles.synopsis}>
+            {render(content.clip)}
+          </div>
+          {products&&products.length>0&&<RelatedItemGallery items={products} title="Merchandise" type="product"></RelatedItemGallery>}
+          {newsitems&&newsitems.length>0&&<RelatedItemGallery items={newsitems} title="News" type="newsitem"></RelatedItemGallery>}
+          </div>  
       </main>
     </SbEditable>
   )
