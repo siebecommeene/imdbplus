@@ -58,12 +58,6 @@ const Song = ({ data, level }) => {
     function (result) {
       setNewsitems(result.data.stories);
     });
-  
-  const [likebutton, setLikebutton] = useState([]);
-  getData(data.story.uuid, locale, content.preview = false, 'likebutton', 'song').then(
-    function (result) {
-      setLikebutton(result.data.stories);
-    });
 
   var pictures = content.pictures;
 

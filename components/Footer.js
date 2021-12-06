@@ -1,5 +1,9 @@
 import styles from "../styles/Footer.module.scss"
 
+const resolveFooter = {
+  en: 'Discover everything about music on TheMusicPro',
+  nl: 'Vind hier alles over muziek op TheMusicPro',
+}
 const Footer = () => {
   return (
     <footer className={styles.footerwrapper}>
