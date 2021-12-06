@@ -13,10 +13,10 @@ const TopMovies = ({ data, level, locale }) => {
 
   var content = data;
 
-  const [movies, setMovies] = useState([]);
-  getFPSData(content._uid, locale, content.preview = false, 'movie').then(
+  const [songs, setSongs] = useState([]);
+  getFPSData(content._uid, locale, content.preview = false, 'song').then(
     function (result) {
-      setMovies(result.data.stories);
+      setSongs(result.data.stories);
   });
   //returning the HTML
   return (
@@ -32,7 +32,7 @@ const TopMovies = ({ data, level, locale }) => {
             {render(content.short)}
           </div>}
 
-          {movies && movies.length > 0 && <SmallCardList items={movies} title="" type="movie"></SmallCardList>}
+          {songs && songs.length > 0 && <SmallCardList items={songs} title="" type="song"></SmallCardList>}
 
         </div>
       </main>
