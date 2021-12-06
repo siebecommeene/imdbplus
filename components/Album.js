@@ -23,6 +23,7 @@ const Album = ({ data, level }) => {
   } else {
     var content = data;
   }
+  var pictures = content.pictures;
 
   return (
     <SbEditable content={content} key={data.uuid}>
@@ -37,8 +38,7 @@ const Album = ({ data, level }) => {
             <LinkedinShareButton url={"http://imdbplus.vercel.app/"+data.story.full_slug} summary={content.short}><LinkedinIcon size={32} round /></LinkedinShareButton>
             <TwitterShareButton url={"http://imdbplus.vercel.app/"+data.story.full_slug} title={content.title}><TwitterIcon size={32} round /></TwitterShareButton>
           </div>
-          <div className={styles.mainpicture} style={{ backgroundImage: `url("${content.mainpicture.filename}")` }}></div>
-          <div className={styles.imagegallery}>
+           <div className={styles.imagegallery}>
             <InPageSlideshow pictures={pictures}></InPageSlideshow>
           </div>
               <div className={styles.personality}>
