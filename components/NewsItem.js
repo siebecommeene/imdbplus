@@ -7,13 +7,13 @@ import SmallCardList from "./SmallCardList"
 
 
 const Event = ({ data, level }) => {
-  var movies = [];
+  var songs = [];
   var personalities = [];
   //enriching data
   if (level === 'data') {
     var content = data.story.content;
-    movies = data.rels.filter(obj => {
-      return content.movies.includes(obj.uuid);
+    songs = data.rels.filter(obj => {
+      return content.songs.includes(obj.uuid);
     });
     personalities = data.rels.filter(obj => {
       return content.personalities.includes(obj.uuid);
@@ -38,7 +38,7 @@ const Event = ({ data, level }) => {
           <div className={styles.article}>
             {render(content.article)}
           </div>
-          {movies && movies.length > 0 && <SmallCardList items={songs} title="Related songs" type="movie"></SmallCardList>}
+          {songs && songs.length > 0 && <SmallCardList items={songs} title="Related songs" type="song"></SmallCardList>}
           {personalities && personalities.length > 0 && <SmallCardList items={personalities} title="Related personalities" type="personality"></SmallCardList>}
       
         </div>
