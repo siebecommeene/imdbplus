@@ -46,17 +46,11 @@ const Song = ({ data, level }) => {
   } else {
     var content = data;
   }
-
-  const [products, setProducts] = useState([]);
-  getData(data.story.uuid, data.story.lang, content.preview = false, 'product', 'personalities').then(
+  
+  const [personalities, setPersonalities] = useState([]);
+  getData(data.story.uuid, data.story.lang, content.preview = false, 'personality', 'songs').then(
     function (result) {
-      setProducts(result.data.stories);
-    });
-
-  const [newsitems, setNewsitems] = useState([]);
-  getData(data.story.uuid, data.story.lang, content.preview = false, 'newsitem', 'personalities').then(
-    function (result) {
-      setNewsitems(result.data.stories);
+      setPersonalities(result.data.stories);
     });
 
   var pictures = content.pictures;
@@ -83,7 +77,7 @@ const Song = ({ data, level }) => {
           </div>
 
           <div className={styles.short}>
-            Number of Plays: {render(content.numberofplays)}
+            Number of Plays: {render(content.number_of_plays)}
           </div>
           <div className={styles.synopsis}>
             Release Date: {render(content.releasedate)}
@@ -94,8 +88,7 @@ const Song = ({ data, level }) => {
           <div className={styles.synopsis}>
             {render(content.clip)}
           </div>
-          {products&&products.length>0&&<RelatedItemGallery items={products} title="Merchandise" type="product"></RelatedItemGallery>}
-          {newsitems&&newsitems.length>0&&<RelatedItemGallery items={newsitems} title="News" type="newsitem"></RelatedItemGallery>}
+          {personalities&&personalities.length>0&&<RelatedItemGallery items={personalities} title="Artist" type="artist"></RelatedItemGallery>}
           </div>  
       </main>
     </SbEditable>
