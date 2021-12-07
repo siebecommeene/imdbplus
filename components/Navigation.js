@@ -17,6 +17,10 @@ const Navigation = ({ locale, locales }) => {
     en: 'Shop',
     nl: 'Winkel',
   }
+  const resolveAboutUs = {
+    en: 'About us',
+    nl: 'Over ons',
+  }
   let homeurl="/";
   if(locale!='default'){
     homeurl = "/"+locale;
@@ -31,7 +35,7 @@ const Navigation = ({ locale, locales }) => {
           <a href={homeurl}>
            <img
               src="https://a.storyblok.com/f/134952/500x500/ebe8675a16/themusicpro-2_adobespark.png"
-              alt="TheMusicPro Logo"
+              alt="TheMusicPro Logo" width="200" height="200"
               className=""
             /> 
           </a>
@@ -49,6 +53,9 @@ const Navigation = ({ locale, locales }) => {
             </div>
             <div className={styles.navlink}>
               <a href={`${defaultLocale}pages/shop`} className={styles.product}>{resolveMerchandise[locale]}</a>
+            </div>
+            <div className={styles.navlink}>
+              <a href={`${defaultLocale}pages/aboutus`} className={styles.product}>{resolveAboutUs[locale]}</a>
             </div>
           </div>
           <div className={styles.navlocales}>

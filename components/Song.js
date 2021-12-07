@@ -76,10 +76,10 @@ const Song = ({ data, level }) => {
             <InPageSlideshow pictures={pictures}></InPageSlideshow>
           </div>
 
-          <div className={styles.short}>
+          <div className={styles.number_of_plays}>
             Number of Plays: {render(content.number_of_plays)}
           </div>
-          <div className={styles.synopsis}>
+          <div className={styles.releasedate}>
             Release Date: {render(content.releasedate)}
           </div>
           <div className={styles.short}>

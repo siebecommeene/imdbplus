@@ -12,8 +12,8 @@ const Footer = () => {
         <div className="">
           <img
             src="https://a.storyblok.com/f/134952/500x500/ebe8675a16/themusicpro-2_adobespark.png"
-            alt="TheMusicPro Logo"
-            className=""
+            alt="TheMusicPro Logo" width="250" height="250"
+             className=""
           />
         </div>
         <p>Discover everything about music on TheMusicPro</p>

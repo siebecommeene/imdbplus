@@ -27,7 +27,7 @@ import TopMovies from './TopMovies'
 import AgeRating from './AgeRating'
 import Album from './Album'
 import Albumlist from './AlbumList'
-import Likebutton from './Likebutton'
+import Mood from './Mood'
 
 const Components = {
   'teaser': Teaser,
@@ -59,7 +59,7 @@ const Components = {
   'agerating':AgeRating,
   'album':Album,
   'albumlist':Albumlist,
-  'likebutton':Likebutton
+  'mood':Mood
   
 }
 

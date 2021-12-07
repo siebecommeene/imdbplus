@@ -19,6 +19,10 @@ const NavigationMobile = ({ locale, locales }) => {
     en: 'Shop',
     nl: 'Winkel',
   }
+  const resolveAboutUs = {
+    en: 'About Us',
+    nl: 'Over ons',
+  }
   function togglenav() {
     setNavstate(result.data.stories);
   }
@@ -35,8 +39,8 @@ const NavigationMobile = ({ locale, locales }) => {
           <a href="/">
             <img
               src="https://a.storyblok.com/f/134952/500x500/ebe8675a16/themusicpro-2_adobespark.png"
-              alt="TheMusicPro Logo"
-              className=""
+              alt="TheMusicPro Logo" width="200" height="200"
+              className="" 
             />
           </a>
         </div>
@@ -54,6 +58,9 @@ const NavigationMobile = ({ locale, locales }) => {
             </div>
             <div className={styles.navlink}>
               <a href={`${defaultLocale}pages/shop`} className={styles.product}>{resolveMerchandise[locale]}</a>
+            </div>
+            <div className={styles.navlink}>
+              <a href={`${defaultLocale}pages/aboutus`} className={styles.aboutus}>{resolveAboutUs[locale]}</a>
             </div>
           </div>
           <div className={styles.navlocales}>

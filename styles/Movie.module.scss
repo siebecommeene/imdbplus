@@ -12,6 +12,7 @@
 
   .short {
     font-weight: 800;
+    background-color: #831212;
   }
 
   .genrelist {
@@ -49,11 +50,19 @@
     .content {}
   }
 
-  .title {}
+  .title {
+    background-color: #831212;
+  }
 
   .summary {}
 
-  .synopsis {}
+  .synopsis {
+    padding: 5px 20px;
+      background-color: #831212;
+      max-width: 100px;
+      margin-right: 10px;
+      font-weight: 700;
+  }
 
   .introduction {}
 
@@ -69,8 +78,8 @@
     .director {}
   }
 
-  .stars {
-    .star {}
+  .number_of_plays {
+    background-color: #831212;
   }
 
   .genres {
@@ -83,5 +92,21 @@
 
   .trailers {
     .trailer {}
+  }
+
+  .number_of_plays {
+    padding: 5px 20px;
+      background-color: #831212;
+      max-width: 100px;
+      margin-right: 10px;
+      font-weight: 700;
+  }
+
+  .releasedate {
+    padding: 5px 20px;
+      background-color: #831212;
+      max-width: 100px;
+      margin-right: 10px;
+      font-weight: 700;
   }
 }
