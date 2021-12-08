@@ -42,7 +42,6 @@ const Song = ({ data, level }) => {
     var genres = data.rels.filter(obj => {
       return content.genre.includes(obj.uuid);
     })
-  
   } else {
     var content = data;
   }
@@ -51,6 +50,12 @@ const Song = ({ data, level }) => {
   getData(data.story.uuid, data.story.lang, content.preview = false, 'personality', 'songs').then(
     function (result) {
       setPersonalities(result.data.stories);
+    });
+  
+  const [albums, setAlbums] = useState([]);
+  getData(data.story.uuid, data.story.lang, content.preview = false, 'album', 'songs').then(
+    function (result) {
+      setAlbums(result.data.stories);
     });
 
   var pictures = content.pictures;
@@ -75,6 +80,7 @@ const Song = ({ data, level }) => {
           <div className={styles.imagegallery}>
             <InPageSlideshow pictures={pictures}></InPageSlideshow>
           </div>
+          <ion-icon name="logo-instagram"></ion-icon> <ion-icon name="logo-twitter"></ion-icon> <ion-icon name="logo-facebook"></ion-icon>
 
           <div className={styles.number_of_plays}>
             Number of Plays: {render(content.number_of_plays)}
@@ -89,7 +95,10 @@ const Song = ({ data, level }) => {
             {render(content.clip)}
           </div>
           {personalities&&personalities.length>0&&<RelatedItemGallery items={personalities} title="Artist" type="artist"></RelatedItemGallery>}
-          </div>  
+          {albums&&albums.length>0&&<SmallCardList items={albums} title="Album" type="artist"></SmallCardList>}
+          </div> 
+          <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+          <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
       </main>
     </SbEditable>
   )

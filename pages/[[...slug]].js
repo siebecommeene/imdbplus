@@ -23,7 +23,7 @@ export async function getStaticProps({ locale, locales, params, preview = false 
 
   let sbParams = {
     version: "draft", // or 'draft'
-    resolve_relations: ["directors", "writers","stars","studios","genres","newsitems","body","songs","personalities","categories", "nationality","album","likebutton"],
+    resolve_relations: ["directors", "writers","stars","studios","genres","newsitems","body","songs","personalities","categories", "nationality","albums",],
     language: locale,
   }
  
