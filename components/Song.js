@@ -40,11 +40,17 @@ const Song = ({ data, level }) => {
     locale = data.story.lang;
     var content = data.story.content;
     var genres = data.rels.filter(obj => {
-      return content.genre.includes(obj.uuid);
+      return content.genres.includes(obj.uuid);
     })
   } else {
     var content = data;
   }
+
+  if(content.moods) {
+    var moods = data.rels.filter(obj => {
+      return content.moods.includes(obj.uuid);
+    });
+  } 
   
   const [personalities, setPersonalities] = useState([]);
   getData(data.story.uuid, data.story.lang, content.preview = false, 'personality', 'songs').then(
@@ -95,7 +101,6 @@ const Song = ({ data, level }) => {
             {render(content.clip)}
           </div>
           {personalities&&personalities.length>0&&<RelatedItemGallery items={personalities} title="Artist" type="artist"></RelatedItemGallery>}
-          {albums&&albums.length>0&&<SmallCardList items={albums} title="Album" type="artist"></SmallCardList>}
           </div> 
           <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
           <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 

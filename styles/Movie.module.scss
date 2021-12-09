@@ -1,8 +1,8 @@
 @import '../styles/colors';
 
-.movie {
+.song {
   .mainpicture {
-    width: 100%;
+    width: 50%;
     height: 500px;
     background-size: cover;
     background-position: center;
@@ -10,31 +10,28 @@
     margin-bottom: 40px;
   }
 
-  .short {
-    font-weight: 800;
-    background-color: #831212;
-  }
-
   .genrelist {
     display: flex;
     margin-bottom: 40px;
-    background-color: #831212;
+    background-color: #d3938a;
+    border-radius: 20px 20px 20px 20px;
 
     .genres {
       padding: 5px 20px;
-      background-color: #831212;
+      background-color: #d3938a;
       max-width: 100px;
       margin-right: 10px;
       font-weight: 700;
+      border-radius: 20px 20px 20px 20px;
     }
   }
   .title { 
-    background-color: #831212;
+    background-color: #5a5946;
+    border-radius: 20px 20px 20px 20px;
   }
   .genre{
     padding: 5px 20px;
-      background-color: #831212;
-      max-width: 100px;
+      background-color: #d3938a;
       margin-right: 10px;
       font-weight: 700;
     }
@@ -53,18 +50,10 @@
   }
 
   .song {
-    background-color: #831212;
+    background-color: #5a5946;
   }
 
   .summary {}
-
-  .synopsis {
-    padding: 5px 20px;
-      background-color: #831212;
-      max-width: 100px;
-      margin-right: 10px;
-      font-weight: 700;
-  }
 
   .introduction {}
 
@@ -80,10 +69,6 @@
     .director {}
   }
 
-  .number_of_plays {
-    background-color: #831212;
-  }
-
   .genres {
     .genre {}
   }
@@ -97,18 +82,17 @@
   }
 
   .number_of_plays {
-    padding: 5px 20px;
-      background-color: #831212;
-      max-width: 100px;
-      margin-right: 10px;
+    padding: 20px 20px;
+      background-color: #4f6194;
       font-weight: 700;
+      border-radius: 20px 20px 20px 20px;
+      margin-bottom: 20px;
   }
 
   .releasedate {
-    padding: 5px 20px;
-      background-color: #831212;
-      max-width: 100px;
-      margin-right: 10px;
+    padding: 20px 20px;
+      background-color: #4f6194;
       font-weight: 700;
+      border-radius: 20px 20px 20px 20px;
   }
 }

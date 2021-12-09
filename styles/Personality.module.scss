@@ -13,6 +13,14 @@
 
   .short {
     font-weight: 800;
+    background-color: rgb(229, 230, 187);
+    border-radius: 20px;
+  }
+
+  .bio {
+    background-color: rgb(229, 230, 187);
+    border-radius: 20px;
+    display: flex;
   }
 
   .countrylist{
