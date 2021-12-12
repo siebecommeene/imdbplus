@@ -4,7 +4,11 @@
 
   .logo {}
 
-  .title {}
+  .title {
+    background-color: rgb(238, 164, 111);
+    border-radius: 20px;
+    padding-left: 20px;
+  }
 
   .price{
     font-size: 2em;
