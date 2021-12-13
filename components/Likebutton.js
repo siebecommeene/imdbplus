@@ -1,18 +1,17 @@
-import React, { useState } from "react"
-import styles from "../styles/EmailOptin.module.scss"
+import styles from "../styles/Likebutton.module.scss"
 
-const Likebutton = ({ }) => {
-  function toggleformstate() {
-    setFormstate(!formstate);
-  }
-  const [formstate,setFormstate] = useState(false);
-  return (
-    
-    <div className={styles.likebutton}>
-      <div className={styles.optinbutton} onClick={() => toggleformstate()}>Keep me posted through the newsletter</div>
-      {/* {formstate&&<iframe width="540" height="900" src="" frameborder="0" scrolling="auto" allowfullscreen style={{ display: `block`, marginLeft: `auto`, marginRight: `auto`, maxWidth: '100%' }}></iframe>} */}
-    </div>
-  );
-};
+// Favorite Button - Heart
+$('.favme').click(function() {
+	$(this).toggleClass('active');
+});
 
-export default Likebutton;
+/* when a user clicks, toggle the 'is-animating' class */
+$(".favme").on('click touchstart', function(){
+  $(this).toggleClass('is_animating');
+});
+
+/*when the animation is over, remove the class*/
+$(".favme").on('animationend', function(){
+  $(this).toggleClass('is_animating');
+});
+

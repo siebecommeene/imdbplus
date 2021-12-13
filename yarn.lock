@@ -1045,6 +1045,11 @@
   dependencies:
     "reusify" "^1.0.4"
 
+"favorite-star@^0.1.5":
+  "integrity" "sha1-CCNOmmq6wWw38Xe74pvpB1o81uE="
+  "resolved" "https://registry.npmjs.org/favorite-star/-/favorite-star-0.1.5.tgz"
+  "version" "0.1.5"
+
 "fbjs@^0.8.16":
   "integrity" "sha512-EQaWFK+fEPSoibjNy8IxUtaFOMXcWsY0JaVrQoZR9zC8N2Ygf9iDITPWjUTVIax95b6I742JFLqASHfsag/vKA=="
   "resolved" "https://registry.npmjs.org/fbjs/-/fbjs-0.8.18.tgz"

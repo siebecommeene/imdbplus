@@ -66,6 +66,8 @@ const Song = ({ data, level }) => {
 
   var pictures = content.pictures;
 
+  <link rel="import" href="path/to/favorite-star.html"></link>
+
   //returning the HTML
   return (
     <SbEditable content={content} key={content._uid}>
@@ -87,7 +89,6 @@ const Song = ({ data, level }) => {
             <InPageSlideshow pictures={pictures}></InPageSlideshow>
           </div>
           <ion-icon name="logo-instagram"></ion-icon> <ion-icon name="logo-twitter"></ion-icon> <ion-icon name="logo-facebook"></ion-icon>
-
           <div className={styles.number_of_plays}>
             Number of Plays: {render(content.number_of_plays)}
           </div>

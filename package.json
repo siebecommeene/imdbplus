@@ -9,6 +9,7 @@
     },
     "dependencies": {
         "axios": "^0.21.1",
+        "favorite-star": "^0.1.5",
         "marked": "^2.0.3",
         "next": "10.2.0",
         "next-share": "^0.12.2",

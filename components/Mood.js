@@ -3,6 +3,7 @@ import SbEditable from "storyblok-react"
 import { render } from "storyblok-rich-text-react-renderer"
 import styles from "../styles/Mood.module.scss"
 
+
 const Mood = ({ data }) => {
   var content = data.story.content;
   return (
