@@ -39,7 +39,7 @@ const Event = ({ data, level }) => {
             {render(content.article)}
           </div>
           {songs && songs.length > 0 && <SmallCardList items={songs} title="Related songs" type="song"></SmallCardList>}
-          {personalities && personalities.length > 0 && <SmallCardList items={personalities} title="Related personalities" type="personality"></SmallCardList>}
+          {personalities && personalities.length > 0 && <SmallCardList items={personalities} title="Related artists" type="personality"></SmallCardList>}
       
         </div>
       </main>

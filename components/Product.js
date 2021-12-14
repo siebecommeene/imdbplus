@@ -9,7 +9,15 @@ import InPageSlideshow from "./InPageSlideshow"
 import SmallCardList from "./SmallCardList"
 import { FacebookShareButton, FacebookIcon,TwitterShareButton, TwitterIcon, LinkedinShareButton, LinkedinIcon } from 'next-share';
 
+const resolveDescription = {
+  en: 'Description',
+  nl: 'Beschrijving',
+}
 
+const resolvePersonalities = {
+  en: 'Related Artists',
+  nl: 'Gerelateerde Artiesten',
+}
 
 const Product = ({ data, level }) => {
   if (level === 'data') {

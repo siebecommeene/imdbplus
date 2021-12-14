@@ -42,6 +42,9 @@ const Song = ({ data, level }) => {
     var genres = data.rels.filter(obj => {
       return content.genres.includes(obj.uuid);
     })
+    var albums = data.rels.filter(obj => {
+      return content.albums.includes(obj.uuid);
+    })
   } else {
     var content = data;
   }
@@ -56,12 +59,6 @@ const Song = ({ data, level }) => {
   getData(data.story.uuid, data.story.lang, content.preview = false, 'personality', 'songs').then(
     function (result) {
       setPersonalities(result.data.stories);
-    });
-  
-  const [albums, setAlbums] = useState([]);
-  getData(data.story.uuid, data.story.lang, content.preview = false, 'album', 'songs').then(
-    function (result) {
-      setAlbums(result.data.stories);
     });
 
   var pictures = content.pictures;
