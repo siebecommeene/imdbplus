@@ -7,6 +7,7 @@ import RelatedItemGallerySmall from "./RelatedItemGallerySmall"
 import RelatedItemGallery from "./RelatedItemGallery"
 import InPageSlideshow from "./InPageSlideshow"
 import SmallCardList from "./SmallCardList"
+import { AwesomeButton } from "react-awesome-button";
 
 const resolveDirectors = {
   en: 'Directors',
@@ -100,15 +101,15 @@ const Song = ({ data, level }) => {
           <div className={styles.imagegallery}>
             <InPageSlideshow pictures={pictures}></InPageSlideshow>
           </div>
-          <ion-icon name="logo-instagram"></ion-icon> <ion-icon name="logo-twitter"></ion-icon> <ion-icon name="logo-facebook"></ion-icon>
+          <AwesomeButton type="primary" ripple onPress={() => {}} >Like this Song</AwesomeButton>
           <div className={styles.number_of_plays}>
             Number of Plays: {render(content.number_of_plays)}
           </div>
           <div className={styles.releasedate}>
             Release Date: {render(content.releasedate)}
           </div>
-          <div className={styles.short}>
-             {render(content.album)}
+          <div className={styles.like}>
+             {render(content.like)}
           </div>
           <div className={styles.synopsis}>
             {render(content.clip)}

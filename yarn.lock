@@ -1901,6 +1901,11 @@
   "resolved" "https://registry.npmjs.org/num2fraction/-/num2fraction-1.2.2.tgz"
   "version" "1.2.2"
 
+"object-assign@^2.0.0":
+  "integrity" "sha1-Q8NuXVaf+OSBbE76i+AtJpZ8GKo="
+  "resolved" "https://registry.npmjs.org/object-assign/-/object-assign-2.1.1.tgz"
+  "version" "2.1.1"
+
 "object-assign@^4.1.0", "object-assign@^4.1.1":
   "integrity" "sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM="
   "resolved" "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz"
@@ -2626,6 +2631,21 @@
     "iconv-lite" "0.4.24"
     "unpipe" "1.0.0"
 
+"react-awesome-button@^6.5.1":
+  "integrity" "sha512-94AS4BSIgRCMSHq8wcy3ztostjLK8cqjUX6DT5oWiYNs3uxLv5uk4yFMlzXBjo0I4TERLOZGn66q0xwb+xw5qw=="
+  "resolved" "https://registry.npmjs.org/react-awesome-button/-/react-awesome-button-6.5.1.tgz"
+  "version" "6.5.1"
+  dependencies:
+    "web-animation-club" "^0.6.0"
+
+"react-button@^1.2.1":
+  "integrity" "sha1-xDHRWzuF5FDK7WmwBlh96DtploI="
+  "resolved" "https://registry.npmjs.org/react-button/-/react-button-1.2.1.tgz"
+  "version" "1.2.1"
+  dependencies:
+    "object-assign" "^2.0.0"
+    "react-style-normalizer" "^1.1.5"
+
 "react-clientside-effect@^1.2.5":
   "integrity" "sha512-2bL8qFW1TGBHozGGbVeyvnggRpMjibeZM2536AKNENLECutp2yfs44IL8Hmpn8qjFQ2K7A9PnYf3vc7aQq/cPA=="
   "resolved" "https://registry.npmjs.org/react-clientside-effect/-/react-clientside-effect-1.2.5.tgz"
@@ -2741,6 +2761,11 @@
     "use-callback-ref" "^1.2.3"
     "use-sidecar" "^1.0.1"
 
+"react-style-normalizer@^1.1.5":
+  "integrity" "sha1-foSz0lzqYiVUXFr2iWOyJYhTRKI="
+  "resolved" "https://registry.npmjs.org/react-style-normalizer/-/react-style-normalizer-1.2.8.tgz"
+  "version" "1.2.8"
+
 "react-style-singleton@^2.1.0", "react-style-singleton@^2.1.1":
   "integrity" "sha512-jNRp07Jza6CBqdRKNgGhT3u9umWvils1xsuMOjZlghBDH2MU0PL2WZor4PGYjXpnRCa9DQSlHMs/xnABWOwYbA=="
   "resolved" "https://registry.npmjs.org/react-style-singleton/-/react-style-singleton-2.1.1.tgz"
@@ -2772,7 +2797,7 @@
     "resize-observer-polyfill" "1.5.0"
     "tabbable" "1.1.2"
 
-"react@^0.14.9 || ^15.3.0 || ^16.0.0", "react@^15.3.0 || ^16.0.0 || ^17.0.0", "react@^16.2.0 || ^17.0.0", "react@^16.6.0 || ^17", "react@^16.8.0 || ^17.0.0", "react@^16.9.0 || ^17", "react@^17.0.2", "react@>= 16.8.0", "react@>=15.3.2", "react@>=16.0.0", "react@>=16.6.0", "react@0.14 || 15 || 16 || 17", "react@0.14.x || ^15.0.0 || ^16.0.0", "react@15.x.x || 16.x.x || 17.x.x", "react@17.0.2":
+"react@^0.14.9 || ^15.3.0 || ^16.0.0", "react@^15.3.0 || ^16.0.0 || ^17.0.0", "react@^16.2.0 || ^17.0.0", "react@^16.6.0 || ^17", "react@^16.8.0 || ^17.0.0", "react@^16.9.0 || ^17", "react@^17.0.2", "react@>= 16.8.0", "react@>=0.12.0", "react@>=15.3.2", "react@>=16.0.0", "react@>=16.6.0", "react@0.14 || 15 || 16 || 17", "react@0.14.x || ^15.0.0 || ^16.0.0", "react@15.x.x || 16.x.x || 17.x.x", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"
@@ -3344,6 +3369,11 @@
   dependencies:
     "glob-to-regexp" "^0.4.1"
     "graceful-fs" "^4.1.2"
+
+"web-animation-club@^0.6.0":
+  "integrity" "sha512-9W+EQu1HiaPLe/7WZlhJ2ULqQ4VL80RPDYW+ZcjfTKp6ayOuT1k3SVO6+tu0VBRmOqueJ/mrG+rjjInIv8Aglg=="
+  "resolved" "https://registry.npmjs.org/web-animation-club/-/web-animation-club-0.6.0.tgz"
+  "version" "0.6.0"
 
 "webidl-conversions@^4.0.2":
   "integrity" "sha512-YQ+BmxuTgd6UXZW3+ICGfyqRyHXVlD5GtQr5+qjiNW7bF0cqrzX500HVXPBOvgXb5YnzDd+h0zqyv61KUD7+Sg=="
