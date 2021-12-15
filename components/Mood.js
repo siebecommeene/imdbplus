@@ -11,12 +11,12 @@ const Mood = ({ data }) => {
       <main>
         {/* <div className={[styles.song, styles.test].join(' ')}> */}
         <div className={styles.studio}>
-          <h1 className={styles.title}>
-            {content.title}
+          <h1 className={styles.Title}>
+            {content.Title}
           </h1>
         </div>
         <div className={styles.description}>
-          {render(content.description)}
+          {render(content.Discription)}
         </div>
       </main>
     </SbEditable>

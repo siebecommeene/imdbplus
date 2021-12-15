@@ -37,7 +37,35 @@
       font-weight: 700;
       box-shadow: inset 0 0 0px 5px rgb(126, 106, 106);
     }
+    .moodlist {
+      display: flex;
+      margin-bottom: 40px;
+      background-color: #c2d3a6;
+      border-radius: 20px 20px 20px 20px;
+    }
 
+  .mood{
+    padding: 5px 20px;
+      background-color: #c2d3a6;
+      margin-right: 10px;
+      font-weight: 700;
+      box-shadow: inset 0 0 0px 5px rgb(111, 214, 116);
+    }
+
+    .albumlist {
+      display: flex;
+      margin-bottom: 40px;
+      background-color: #4386df;
+      border-radius: 20px 20px 20px 20px;
+    }
+
+  .album{
+    padding: 5px 20px;
+      background-color: #4386df;
+      margin-right: 10px;
+      font-weight: 700;
+      box-shadow: inset 0 0 0px 5px rgb(4, 38, 77);
+    }
   .peoplesegment {
     margin-top:40px;
     .title {

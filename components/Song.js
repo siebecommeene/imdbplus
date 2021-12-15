@@ -42,9 +42,6 @@ const Song = ({ data, level }) => {
     var genres = data.rels.filter(obj => {
       return content.genres.includes(obj.uuid);
     })
-    var albums = data.rels.filter(obj => {
-      return content.albums.includes(obj.uuid);
-    })
   } else {
     var content = data;
   }
@@ -54,6 +51,12 @@ const Song = ({ data, level }) => {
       return content.moods.includes(obj.uuid);
     });
   } 
+
+  if(content.albums) {
+    var albums = data.rels.filter(obj => {
+      return content.albums.includes(obj.uuid);
+    });
+  }
   
   const [personalities, setPersonalities] = useState([]);
   getData(data.story.uuid, data.story.lang, content.preview = false, 'personality', 'songs').then(
@@ -62,8 +65,6 @@ const Song = ({ data, level }) => {
     });
 
   var pictures = content.pictures;
-
-  <link rel="import" href="path/to/favorite-star.html"></link>
 
   //returning the HTML
   return (
@@ -77,7 +78,21 @@ const Song = ({ data, level }) => {
           <div className={styles.genrelist}>
             {genres.map((item, index) => (
               <div className={styles.genre}>
-                {item.content.title}
+               Genre: {item.content.title}
+              </div>
+            ))}
+          </div>
+          <div className={styles.moodlist}>
+            {moods.map((item, index) => (
+              <div className={styles.mood}>
+               Mood: {item.content.Title}
+              </div>
+            ))}
+          </div>
+          <div className={styles.albumlist}>
+            {albums.map((item, index) => (
+              <div className={styles.album}>
+                Album: {item.content.Title}
               </div>
             ))}
           </div>
@@ -93,7 +108,7 @@ const Song = ({ data, level }) => {
             Release Date: {render(content.releasedate)}
           </div>
           <div className={styles.short}>
-             {render(content.clip)}
+             {render(content.album)}
           </div>
           <div className={styles.synopsis}>
             {render(content.clip)}

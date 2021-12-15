@@ -31,7 +31,7 @@ const Album = ({ data, level }) => {
         {/* <div className={[styles.movie, styles.test].join(' ')}> */}
         <div className={styles.album}>
           <h1 className={styles.title}>
-            {content.title}
+            {content.Title}
           </h1>
           <div className="sharebar">
             <FacebookShareButton url={"http://imdbplus.vercel.app/"+data.story.full_slug} quote={content.short} hashtag={'#imdbplus'}><FacebookIcon size={32} round /></FacebookShareButton>
@@ -42,12 +42,11 @@ const Album = ({ data, level }) => {
             <InPageSlideshow pictures={pictures}></InPageSlideshow>
           </div>
               <div className={styles.personality}>
-                {render(content.personality)}
+              Amount of Numbers: {render(content.Amount_of_Numbers)}
               </div>
           <div className={styles.description}>
-            <div className={styles.title}>Release Date</div>
-            <div className={styles.content}> {render(content.releasedate)}</div>
-
+            <div className={styles.title}></div>
+            <div className={styles.content}> Release Date: {render(content.Release_Date)}</div>
           </div>
           {songs && songs.length > 0 && <SmallCardList items={songs} title="Related Songs" type="song"></SmallCardList>}
           {personalities && personalities.length > 0 && <SmallCardList items={personalities} title="Related Artists" type="personality"></SmallCardList>}
