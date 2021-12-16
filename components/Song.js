@@ -52,12 +52,6 @@ const Song = ({ data, level }) => {
       return content.moods.includes(obj.uuid);
     });
   } 
-
-  if(content.albums) {
-    var albums = data.rels.filter(obj => {
-      return content.albums.includes(obj.uuid);
-    });
-  }
   
   const [personalities, setPersonalities] = useState([]);
   getData(data.story.uuid, data.story.lang, content.preview = false, 'personality', 'songs').then(
@@ -87,13 +81,6 @@ const Song = ({ data, level }) => {
             {moods.map((item, index) => (
               <div className={styles.mood}>
                Mood: {item.content.Title}
-              </div>
-            ))}
-          </div>
-          <div className={styles.albumlist}>
-            {albums.map((item, index) => (
-              <div className={styles.album}>
-                Album: {item.content.Title}
               </div>
             ))}
           </div>
