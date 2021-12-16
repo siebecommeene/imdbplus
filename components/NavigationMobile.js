@@ -7,6 +7,10 @@ const NavigationMobile = ({ locale, locales }) => {
     en: 'Songs',
     nl: 'Liedjes',
   }
+  const resolveAlbums = {
+    en: 'Albums',
+    nl: 'Albums',
+  }
   const resolveArtists = {
     en: 'Artists',
     nl: 'Artiesten',
@@ -49,6 +53,9 @@ const NavigationMobile = ({ locale, locales }) => {
           <div className={styles.navlinks}>
             <div className={styles.navlink}>
               <a href={`${defaultLocale}pages/songs`} className={styles.song}>{resolveSongs[locale]}</a>
+            </div>
+            <div className={styles.navlink}>
+              <a href={`${defaultLocale}pages/albums`} className={styles.song}>{resolveAlbums[locale]}</a>
             </div>
             <div className={styles.navlink}>
               <a href={`${defaultLocale}pages/artists`} className={styles.personality}>{resolveArtists[locale]}</a>

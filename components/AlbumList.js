@@ -20,7 +20,7 @@ const AlbumList = ({ data, level }) => {
   return (
 
     <div>
-      {items && items.length > 0 && <SmallCardList items={items} type="albums"></SmallCardList>}
+      {items && items.length > 0 && <SmallCardList items={items} type="album"></SmallCardList>}
     </div>
 
   );
