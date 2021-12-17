@@ -8,6 +8,7 @@ import RelatedItemGallery from "./RelatedItemGallery"
 import InPageSlideshow from "./InPageSlideshow"
 import SmallCardList from "./SmallCardList"
 import { AwesomeButton } from "react-awesome-button";
+import "react-awesome-button/dist/styles.css";
 
 const resolveDirectors = {
   en: 'Directors',
@@ -33,6 +34,10 @@ const resolveNews = {
   en: 'Events',
   nl: 'Evenementen',
 }
+const resolvePersonality = {
+  en: 'Artist',
+  nl: 'Artiest',
+}
 
 const Song = ({ data, level }) => {
   var locale = 'en';
@@ -42,6 +47,9 @@ const Song = ({ data, level }) => {
     var content = data.story.content;
     var genres = data.rels.filter(obj => {
       return content.genres.includes(obj.uuid);
+    })
+    var albums = data.rels.filter(obj => {
+      return content.albums.includes(obj.uuid);
     })
   } else {
     var content = data;
@@ -88,7 +96,7 @@ const Song = ({ data, level }) => {
           <div className={styles.imagegallery}>
             <InPageSlideshow pictures={pictures}></InPageSlideshow>
           </div>
-          <AwesomeButton type="primary" ripple onPress={() => {}} >Like this Song</AwesomeButton>
+          <AwesomeButton type="primary">Like this Song</AwesomeButton>
           <div className={styles.number_of_plays}>
             Number of Plays: {render(content.number_of_plays)}
           </div>
@@ -102,6 +110,7 @@ const Song = ({ data, level }) => {
             {render(content.clip)}
           </div>
           {personalities&&personalities.length>0&&<RelatedItemGallery items={personalities} title="Artist" type="artist"></RelatedItemGallery>}
+          {albums&&albums.length>0&&<SmallCardList items={albums} title="Album" type="album"></SmallCardList>}
           </div> 
           <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
           <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 

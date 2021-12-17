@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import SbEditable from "storyblok-react"
 import { render } from "storyblok-rich-text-react-renderer"
-import styles from "../styles/Product.module.scss"
+import styles from "../styles/Album.module.scss"
 import Storyblok, { useStoryblok, getData } from "../utils/storyblok"
 import RelatedItem from "./RelatedItem"
 import RelatedItemGallery from "./RelatedItemGallery"
@@ -31,7 +31,7 @@ const Album = ({ data, level }) => {
         {/* <div className={[styles.movie, styles.test].join(' ')}> */}
         <div className={styles.album}>
           <h1 className={styles.title}>
-            {content.Title}
+            {content.title}
           </h1>
           <div className="sharebar">
             <FacebookShareButton url={"http://imdbplus.vercel.app/"+data.story.full_slug} quote={content.short} hashtag={'#imdbplus'}><FacebookIcon size={32} round /></FacebookShareButton>
@@ -39,13 +39,11 @@ const Album = ({ data, level }) => {
             <TwitterShareButton url={"http://imdbplus.vercel.app/"+data.story.full_slug} title={content.title}><TwitterIcon size={32} round /></TwitterShareButton>
           </div>
           <div className={styles.mainpicture} style={{ backgroundImage: `url("${content.mainpicture.filename}")` }}></div>
-           <div className={styles.imagegallery}>
-            <InPageSlideshow pictures={pictures}></InPageSlideshow>
-          </div>
-              <div className={styles.personality}>
+           
+              <div className={styles.Amount_of_Numbers}>
               Amount of Numbers: {render(content.Amount_of_Numbers)}
               </div>
-          <div className={styles.description}>
+          <div className={styles.Release_Date}>
             <div className={styles.title}></div>
             <div className={styles.content}> Release Date: {render(content.Release_Date)}</div>
           </div>
