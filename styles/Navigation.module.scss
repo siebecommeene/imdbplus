@@ -55,6 +55,9 @@
           &.product:hover {
             border: 5px solid $color-primary-product;
           }
+          &.album:hover {
+            border: 5px solid $color-primary-product;
+          }
         }
 
       }

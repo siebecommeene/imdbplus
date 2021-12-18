@@ -34,10 +34,6 @@ const resolveNews = {
   en: 'Events',
   nl: 'Evenementen',
 }
-const resolvePersonality = {
-  en: 'Artist',
-  nl: 'Artiest',
-}
 
 const Song = ({ data, level }) => {
   var locale = 'en';
@@ -68,6 +64,8 @@ const Song = ({ data, level }) => {
     });
 
   var pictures = content.pictures;
+
+  var clip = content.clip;
 
   //returning the HTML
   return (
@@ -105,9 +103,6 @@ const Song = ({ data, level }) => {
           </div>
           <div className={styles.like}>
              {render(content.like)}
-          </div>
-          <div className={styles.synopsis}>
-            {render(content.clip)}
           </div>
           {personalities&&personalities.length>0&&<RelatedItemGallery items={personalities} title="Artist" type="artist"></RelatedItemGallery>}
           {albums&&albums.length>0&&<SmallCardList items={albums} title="Album" type="album"></SmallCardList>}

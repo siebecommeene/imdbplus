@@ -67,6 +67,7 @@ export async function getData(uuid, locale, preview, components, itemtype, sortb
   }
 }
 
+
 export async function getFPSData(uuid, locale, preview, components) {
 
 
