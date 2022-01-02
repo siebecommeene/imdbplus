@@ -41,9 +41,6 @@ const MovieList = ({ data, level, locale }) => {
           <div className={styles.orderbyoption} onClick={() => updateSortby("name:asc")}>
             Title
           </div>
-          <div className={styles.orderbyoption} onClick={() => updateSortby("number_of_plays:desc")}>
-            Number of Plays
-          </div>
         </div>
       </div>
       <div>
