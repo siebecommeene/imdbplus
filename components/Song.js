@@ -10,9 +10,9 @@ import SmallCardList from "./SmallCardList"
 import { AwesomeButton } from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
 
-const resolveDirectors = {
-  en: 'Directors',
-  nl: 'Regisseurs',
+const resolveArtist = {
+  en: 'Artist',
+  nl: 'Artiest',
 }
 
 const resolveWriters = {
